@@ -15,6 +15,25 @@ function validateEmail() {
                 document.getElementById('validationResult').textContent = "Email is not valid.";
             }
         }
+        function formatDate(inputDate) {
+  // Split the input date string into day, month, and year parts
+  const parts = inputDate.split('/');
+  if (parts.length !== 3) {
+    return 'Invalid date format';
+  }
+
+  const day = parseInt(parts[0], 10);
+  const month = parseInt(parts[1], 10) - 1; // Months in JavaScript are 0-indexed
+  const year = parseInt(parts[2], 10);
+
+  // Create a new Date object with the parsed values
+  const date = new Date(year, month, day);
+
+  // Format the date as "yyyy-mm-dd"
+  const formattedDate = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
+
+  return formattedDate;
+}
         function restrict()
         {
                     var today = new Date();
@@ -26,9 +45,15 @@ function validateEmail() {
 
                      // Define your condition here
                      //var maxD = new Date("2005-09-20"); // Replace with your minimum date
-  		     //var minD = new Date("1969-01-01"); // Replace with your maximum date
-                     var maxD = new Date(maxDate.toLocaleDateString()); // Replace with your minimum date
-                     var minD = new Date(minDate.toLocaleDateString()); // Replace with your maximum date
+  		            //var minD = new Date("1969-01-01"); // Replace with your maximum date
+                     const inputMaxDate=maxDate.toLocaleDateString();
+                     const inputMinDate=minDate.toLocaleDateString();
+
+                     const maxformattedDate = formatDate(inputMaxDate);
+                     const minformattedDate = formatDate(inputMinDate);
+
+                     var maxD = new Date(maxformattedDate); // Replace with your minimum date
+                     var minD = new Date(minformattedDate); // Replace with your maximum date
 
                         if (selectedDate < minD) {
                          dateInput.value = ""; // Clear the input if the selected date is before the minimum date
