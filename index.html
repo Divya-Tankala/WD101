@@ -78,7 +78,7 @@
     
     <h2><center>Registration Form</h2></center>
         <table>
-        <form id="registrationForm" onsubmit="return validateForm()">
+        <form id="registrationForm" >
             <tr><td><label for="name">Name<font color=red>*</font></label></td>
             <td><input type="text" id="name" name="name" placeholder="Enter ful name"required></td></tr>
 
@@ -89,14 +89,13 @@
             <td><input type="password" id="password" name="password" placeholder="Enter Password"required></td></tr>
 
             <tr><td><label for="dob">Date of Birth<font color=red>*</font></label></td>
-            <td><input type="date" id="dob" name="dob" placeholder="dd/mm/yy" onchange="restrict()"required class="form-control date-input"></td></tr>
-
+            <td><input  type="date" id="dob" name="dob" placeholder="dd/mm/yyyy" onchange="restrict()" required class="form-control date-input"></td></tr>
             <tr><td>
                 <input type="checkbox" id="terms" name="terms" required></td>
                 <td><label>I accept the terms and conditions.
             </label></td></tr>
 <tr><td colspan="2">
-            <button type="submit">Submit</button></td></tr></table>
+            <button type="submit" >Submit</button></td></tr></table>
         </form>
     </div>
 <div class="table_container" id="output">
@@ -107,8 +106,8 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Password</th>
-                    <th>dob</th>
-                    <th>accepted terms?</th>
+                    <th>Dob</th>
+                    <th>Accepted terms?</th>
                 </tr>
             </thead>
             <tbody id="userTableBody"></tbody>
