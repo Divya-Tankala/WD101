@@ -4,7 +4,7 @@ function validateEmail() {
     // Get the value of the input
     const email = emailInput.value;
     // Regular expression for email validation
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     // Check if the email matches the pattern
     if (emailPattern.test(email)) {
