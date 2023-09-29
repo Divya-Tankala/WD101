@@ -1,20 +1,20 @@
-function validateEmail() {
+//function validateEmail() {
     // Get the input element
-    const emailInput = document.getElementById('email');
+    //const emailInput = document.getElementById('email');
     // Get the value of the input
-    const email = emailInput.value;
+    //const email = emailInput.value;
     // Regular expression for email validation
-    const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    //const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     // Check if the email matches the pattern
-    if (emailPattern.test(email)) {
+    //if (emailPattern.test(email)) {
         // Email is valid
-        document.getElementById('validationResult').textContent = "";
-    } else {
+        //document.getElementById('validationResult').textContent = "";
+   // } else {
         // Email is not valid
-        document.getElementById('validationResult').textContent = "Email is not valid.";
-    }
-}
+       // document.getElementById('validationResult').textContent = "Email is not valid.";
+    //}
+//}
 function formatDate(inputDate) {
     // Split the input date string into day, month, and year parts
 
