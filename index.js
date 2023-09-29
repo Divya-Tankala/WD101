@@ -9,10 +9,10 @@ function validateEmail() {
     // Check if the email matches the pattern
     if (emailPattern.test(email)) {
         // Email is valid
-        document.getElementById('validationResult').textContent = "";
+        document.getElementById('email').textContent = "";
     } else {
         // Email is not valid
-        document.getElementById('validationResult').textContent = "Email is not valid.";
+        document.getElementById('email').textContent = "Email is not valid.";
     }
 }
 function formatDate(inputDate) {
