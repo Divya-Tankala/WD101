@@ -16,8 +16,6 @@
     //}
 //}
 function formatDate(inputDate) {
-    // Split the input date string into day, month, and year parts
-
     const parts = inputDate.split('/');
     if (parts.length !== 3) {
         return 'Invalid date format';
@@ -34,7 +32,6 @@ function formatDate(inputDate) {
     const formattedDate = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
     return formattedDate;
 }
-
 function restrict() {
 
     var dateInput = document.getElementById("dob");
@@ -66,7 +63,7 @@ function initialState() {
     dateInput.setAttribute("max", maxD.toISOString().split('T')[0]);
 }
 
-// setting min and max date when page loaded 
+
  window.onload = initialState
 
 document.addEventListener("DOMContentLoaded", function () {
